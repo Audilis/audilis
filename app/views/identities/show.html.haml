@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Provider:
+  = @identity.provider
+%p
+  %b Uid:
+  = @identity.uid
+%p
+  %b Data:
+  = @identity.data
+
+= link_to 'Edit', edit_identity_path(@identity)
+\|
+= link_to 'Back', identities_path

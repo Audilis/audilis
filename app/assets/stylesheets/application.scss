@@ -1,0 +1,20 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ */
+
+@import "normalize-rails";
+
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/base";
+
+@import "refills/animate";
+@import "refills/parallax";
+
+@import "shared/fonts";
+@import "shared/splash";
+@import "shared/navigation";
+@import "shared/backgrounds"
