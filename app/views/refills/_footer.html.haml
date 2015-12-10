@@ -1,6 +1,6 @@
 %footer.footer{:role => "contentinfo"}
-  .footer-logo
-    %img{:alt => "Logo image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
+  -#.footer-logo
+    = image_tag('logo_full.png', alt: 'Audilis')
   .footer-links
     %ul
       %li
@@ -15,11 +15,17 @@
       %li
         %h3 Follow Us
       %li
-        %a{:href => "javascript:void(0)"} Facebook
+        %a{:href => "javascript:void(0)"}
+          = icon('facebook fa-fw')
+          Facebook
       %li
-        %a{:href => "javascript:void(0)"} Twitter
+        %a{:href => "javascript:void(0)"}
+          = icon('twitter fa-fw')
+          Twitter
       %li
-        %a{:href => "javascript:void(0)"} YouTube
+        %a{:href => "javascript:void(0)"}
+          = icon('youtube fa-fw')
+          YouTube
     %ul
       %li
         %h3 Legal
@@ -27,5 +33,8 @@
         %a{:href => "javascript:void(0)"} Terms and Conditions
       %li
         %a{:href => "javascript:void(0)"} Privacy Policy
-  %hr/
-  %p Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.
+  %hr
+  %p
+    &copy;
+    = Time.now.year
+    Audilis

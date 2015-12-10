@@ -4,21 +4,30 @@
  *
  */
 
-// @import "normalize-rails";
-
+/*
+ * Base style scaffold
+ */
 @import "bourbon";
-@import "base/grid-settings";
 @import "neat";
 @import "base/base";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-@import "refills/animate";
-@import "refills/parallax";
+/*
+ * Refill pattern styles
+ */
+@import "refills/navigation";
+@import "refills/hero";
+@import "refills/footer";
 
-@import "shared/fonts";
-@import "shared/splash";
-@import "shared/navigation";
-@import "shared/backgrounds";
+/*
+ * Application styles
+ */
+@import 'shared/fonts';
 
+/*
+ * Style overrides
+ */
 body {
   margin:   0;
   padding:  0;

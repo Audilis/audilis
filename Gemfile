@@ -49,7 +49,7 @@ end
 
 gem 'mailchimp-api', require: 'mailchimp'
 
-#gem 'normalize-rails'
+gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'bourbon'
 gem 'neat'
