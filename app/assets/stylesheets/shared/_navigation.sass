@@ -1,24 +1,8 @@
 header[role='banner']
   height: $header-height
 
-  text-align: center
-
-  background: rgba(#333, 0.8)
-  color:      white
-
   > nav[role='navigation']
-    width:  $max-width
-
-    margin: 0 auto
-
-    > ul.nav-menu, .logo
-      display: inline-block
-      vertical-align: bottom
-
-    > .logo
-      height: $header-height - 8px
-
-      margin: 4px 16px 4px 0
+    margin: 0 16px
 
     > ul.nav-menu
       list-style: none
@@ -27,22 +11,16 @@ header[role='banner']
       margin:   0
 
       > li.nav-item
-        cursor: pointer
-
-        overflow: hidden
-
-        display:        inline-block
-        vertical-align: middle
-
-        border-bottom:  4px solid transparent
-        margin:         0
-        padding:        4px 16px
-        padding-top:    $header-height - 32px
-
-        &:hover
-          border-color: lavender
-
-          background: rgba(white, 0.1)
+        display: inline
 
         > a
+          display:        inline-block
+          vertical-align: middle
+
+          margin:   0
+          padding:  0 16px
+
+          font-size:    24px
+          line-height:  $header-height
+
           color: white

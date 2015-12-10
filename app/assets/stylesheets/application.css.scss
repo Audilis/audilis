@@ -4,7 +4,7 @@
  *
  */
 
-@import "normalize-rails";
+// @import "normalize-rails";
 
 @import "bourbon";
 @import "base/grid-settings";
@@ -17,4 +17,9 @@
 @import "shared/fonts";
 @import "shared/splash";
 @import "shared/navigation";
-@import "shared/backgrounds"
+@import "shared/backgrounds";
+
+body {
+  margin:   0;
+  padding:  0;
+}
