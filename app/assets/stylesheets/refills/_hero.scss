@@ -6,19 +6,28 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $hero-color: white;
-  $hero-image: image-path('backgrounds/characters.png');
+  $chars-image: image-path('backgrounds/characters.png');
 
-  @include background(url($hero-image), no-repeat scroll);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-color: white;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   padding-bottom: 2em;
 
+  &.characters {
+    background-image: url($chars-image)
+  }
+
   .hero-logo img {
     display: block;
-    height: 9em;
+    height: 3em;
     margin: 0 auto 1em;
+
+    &.big {
+      height: 16em;
+    }
   }
 
   .hero-inner {

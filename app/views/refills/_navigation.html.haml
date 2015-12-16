@@ -2,7 +2,7 @@
   %header.navigation{:role => "banner"}
     .navigation-wrapper
       %a.logo{:href => "javascript:void(0)"}
-        = image_tag('logo_small.png', alt: 'Audilis')
+        = image_tag('logo-full.png', alt: 'Audilis')
       %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
       %nav{:role => "navigation"}
         %ul#js-navigation-menu.navigation-menu.show
@@ -18,9 +18,9 @@
           %li.nav-link
             %a{:href => "javascript:void(0)"} About Us
       .navigation-tools
-        -#.search-bar
-          %form{:role => "search"}
-            %input{:placeholder => "Enter Search", :type => "search"}/
+        .email-bar
+          %form{:role => "form"}
+            %input{:placeholder => "Subscribe", :type => "email"}/
             %button{:type => "submit"}
-              %img{:alt => "Search Icon", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png"}/
-        %a.sign-up{:href => "javascript:void(0)"} Sign Up
+              = icon('envelope fa-fw')
+        -#%a.button.sign-up{:href => "javascript:void(0)" } Sign Up
