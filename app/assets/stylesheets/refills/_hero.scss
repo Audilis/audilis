@@ -6,7 +6,7 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $hero-color: white;
-  $chars-image: image-path('backgrounds/characters.png');
+  $liag-image: image-path('backgrounds/characters.png');
 
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -16,8 +16,8 @@
   background-size: contain;
   padding-bottom: 2em;
 
-  &.characters {
-    background-image: url($chars-image)
+  &.liag {
+    background-image: url($liag-image)
   }
 
   .hero-logo img {

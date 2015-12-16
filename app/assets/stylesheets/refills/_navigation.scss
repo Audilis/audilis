@@ -42,7 +42,7 @@ header.navigation {
   .logo {
     @include background(linear-gradient(top, white, rgba($pink, 0.5)));
 
-    box-shadow: rgba($blue, 0.5) 0 0 2em inset;
+    box-shadow: rgba($blue, 0.5) 0 0.5em 2em inset;
     float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;

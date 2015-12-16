@@ -6,11 +6,13 @@
       %li
         %h3 Content
       %li
-        %a{:href => "javascript:void(0)"} About
+        = link_to 'Games', Game.first
       %li
-        %a{:href => "javascript:void(0)"} Contact
+        = link_to 'Team', team_path
       %li
-        %a{:href => "javascript:void(0)"} Products
+        = link_to 'Contact', new_contact_path
+      %li
+        = link_to 'About Us', about_path
     %ul
       %li
         %h3 Follow Us
@@ -34,9 +36,9 @@
       %li
         %h3 Legal
       %li
-        %a{:href => "javascript:void(0)"} Terms and Conditions
+        = link_to 'Terms and Conditions', terms_legal_path
       %li
-        %a{:href => "javascript:void(0)"} Privacy Policy
+        = link_to 'Privacy Policy', privacy_legal_path
   %hr
   %p
     &copy;

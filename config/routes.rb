@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  resource :home, only: [:show], controller: :home
+  resource :team, only: [:show], controller: :team
+  resource :about, only: [:show], controller: :about
+  resource :legal, only: [], controller: :legal do
+    collection do
+      get :terms
+      get :privacy
+    end
+  end
+  resource :contact, only: [:new, :create], controller: :contact
+  resources :games
   resources :identities
 
-  root 'identities#new'
+  root 'home#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
