@@ -27,6 +27,7 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
+  border-bottom: 1px solid rgba($pink, 0.2);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -39,15 +40,18 @@ header.navigation {
   }
 
   .logo {
+    @include background(linear-gradient(top, white, rgba($pink, 0.5)));
+
+    box-shadow: rgba($blue, 0.5) 0 0 2em inset;
     float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;
-    padding-right: 2em;
+    padding-right: $navigation-padding;
+    margin-right: $navigation-padding;
 
     img {
       max-height: $navigation-height;
-      padding: 0.2em 0 1.2em 0;
-      opacity: 0.4;
+      padding: 0.4em 0;
     }
   }
 
