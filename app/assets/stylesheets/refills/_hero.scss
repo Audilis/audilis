@@ -5,22 +5,20 @@
   $large-screen: em(860) !default;
   //////////////////////////////////////////////////////////////////////////////////
 
-  $hero-background-top: lighten(#7F99BE, 20%);
-  $hero-background-bottom: lighten(#20392B, 20%);
   $hero-color: white;
-  $gradient-angle: 10deg;
   $hero-image: image-path('backgrounds/characters.png');
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #324766;
-  background-position: top;
+  @include background(url($hero-image), no-repeat scroll);
+  background-color: white;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 3em;
+  background-size: contain;
+  padding-bottom: 2em;
 
   .hero-logo img {
-    height: 5em;
-    margin-bottom: 1em;
+    display: block;
+    height: 9em;
+    margin: 0 auto 1em;
   }
 
   .hero-inner {
@@ -55,9 +53,5 @@
       }
     }
 
-    button {
-      @include button(flat, $base-accent-color);
-      padding: 0.7em 1em;
-    }
   }
 }
