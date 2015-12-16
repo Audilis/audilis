@@ -8,5 +8,5 @@
     = csrf_meta_tags
   %body{:class => random_character}
     = render 'refills/navigation'
-    = yield
+    %main= yield
     = render 'refills/footer'
