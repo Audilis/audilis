@@ -6,8 +6,8 @@
 #
 default: &default
   adapter:  mysql2
-  username: <%= ENV['MYSQL_USERNAME'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
+  username: root
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
   host:     <%= ENV['MYSQL_HOST'] || 'localhost' %>
   port:     <%= ENV['MYSQL_PORT'] || 3306 %>
 
