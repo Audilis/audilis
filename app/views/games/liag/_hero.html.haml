@@ -1,0 +1,6 @@
+.hero{ class: @game.uid }
+  .hero-inner
+    = link_to @game, class: 'hero-logo' do
+      = image_tag("logos/full/#{@game.uid}.png", alt: @game.title, class: 'big')
+    .hero-copy
+      %q= @game.tagline

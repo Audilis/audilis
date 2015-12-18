@@ -10,6 +10,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @sections = @game.description.split("\n").reject(&:blank?).compact
   end
 
   # GET /games/new

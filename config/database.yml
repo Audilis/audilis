@@ -6,8 +6,8 @@
 #
 default: &default
   adapter:  mysql2
-  host:     <%= ENV['MYSQL_HOST'] || 'localhost' %>
-  port:     <%= ENV['MYSQL_PORT'] || 3306 %>
+  host:     <%= ENV['DB_PORT_3306_TCP_ADDR'] || 'localhost' %>
+  port:     <%= ENV['DB_PORT_3306_TCP_PORT'] || 3306 %>
 
 development:
   <<: *default
