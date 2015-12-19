@@ -16,6 +16,8 @@
 /*
  * Refill pattern styles
  */
+@import "refills/textures";
+@import "refills/parallax";
 @import "refills/navigation";
 @import "refills/hero";
 @import "refills/footer";
@@ -34,8 +36,21 @@ body {
   margin:   0;
   padding:  0;
 
-  main {
-    @include outer-container;
+  @include texture(135deg, $green, $pink, 86, 1);
+}
+
+main {
+  @include outer-container;
+
+  background: white;
+}
+
+a {
+  color: $dark-blue;
+
+  &:focus,
+  &:hover {
+    color: $blue;
   }
 }
 

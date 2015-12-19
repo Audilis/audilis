@@ -6,19 +6,17 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $hero-color: white;
-  $liag-image: image-path('backgrounds/liag/characters.png');
-
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-color: white;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-bottom: 2em;
 
   &.liag {
-    background-image: url($liag-image)
+    $liag-image: url(image-path('backgrounds/liag/characters.png'));
+
+    //@include background(linear-gradient(top, transparent, rgba($pink, 0.2)), $liag-image);
+    @include background(linear-gradient(top, transparent, rgba(darken($dark-blue, 40%), 0.3)), $liag-image center no-repeat);
+
+    background-size: cover;
   }
+
+  border-bottom: 1px solid $green;
 
   .hero-logo img {
     display: block;

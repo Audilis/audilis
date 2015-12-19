@@ -15,7 +15,8 @@
   \|
   = link_to 'Back', games_path
 
-= render "games/#{ @game.uid }/hero"
+- content_for(:hero) do
+  = render "games/#{ @game.uid }/hero"
 
 - @sections.each_with_index do |section, idx|
   = render "games/#{ @game.uid }/section_#{ idx }", section: section

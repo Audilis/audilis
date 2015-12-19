@@ -1,1 +1,2 @@
-= render "shared/heros/#{ @game.uid }" if @game.present?
+- content_for(:hero) do
+  = render "shared/heros/#{ @game.uid }" if @game.present?

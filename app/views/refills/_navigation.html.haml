@@ -13,12 +13,13 @@
                 - Game.all.each do |game|
                   %li
                     = link_to game.title, game, alt: game.tagline
-          %li.nav-link
-            = link_to 'Team', team_path
+          %li.nav-link.more
+            = link_to 'About', about_path
+            %ul.submenu
+              %li= link_to 'Team', team_path
+              %li= link_to 'FAQ', about_path
           %li.nav-link
             = link_to 'Contact', new_contact_path
-          %li.nav-link
-            = link_to 'About Us', about_path
       .navigation-tools
         .email-bar
           %form{:role => "form"}
