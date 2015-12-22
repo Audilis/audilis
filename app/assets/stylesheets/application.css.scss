@@ -36,13 +36,22 @@ body {
   margin:   0;
   padding:  0;
 
-  @include texture(135deg, $green, $pink, 86, 1);
+  @include texture(135deg, $dark-blue, $red, 86, 1);
 }
 
 main {
   @include outer-container;
 
   background: white;
+
+  section {
+    h1, h2, h3, h4, h5, h6 {
+      padding:       1em 0;
+      border-bottom: 1px solid lightgray;
+    }
+
+    padding: 1em;
+  }
 }
 
 a {

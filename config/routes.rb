@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resource :contact, only: [:new, :create], controller: :contact
   resources :games
   resources :identities
+  resources :subscriptions, only: [:create]
 
   root 'home#show'
 
