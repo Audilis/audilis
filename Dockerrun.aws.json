@@ -1,0 +1,69 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "web",
+      "host": {
+        "sourcePath": "."
+      }
+    },
+    {
+      "name": "nginx-config",
+      "host": {
+        "sourcePath": "./config/nginx.conf"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "db",
+      "image": "mysql:latest",
+      "essential": true,
+      "memory": 256,
+      "portMappings": [
+        {
+          "hostPort": 3306,
+          "containerPort": 13306
+        }
+      ]
+    },
+    {
+      "name": "web",
+      "image": "189429023741.dkr.ecr.us-east-1.amazonaws.com/audilis:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "web",
+          "containerPath": "/usr/src/app",
+          "readOnly": false
+        }
+      ]
+    }
+    {
+      "name": "nginx",
+      "image": "nginx:latest",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "nginx-config",
+          "containerPath": "/etc/nginx/nginx.conf",
+          "readOnly": true
+        }
+      ]
+    }
+  ],
+}
