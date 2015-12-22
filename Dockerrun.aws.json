@@ -93,7 +93,7 @@
           "readOnly": false
         }
       ]
-    }
+    },
     {
       "name": "nginx",
       "image": "nginx:latest",
