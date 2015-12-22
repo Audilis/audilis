@@ -25,6 +25,24 @@
           "hostPort": 3306,
           "containerPort": 13306
         }
+      ],
+      "environment": [
+        {
+          "name": "MYSQL_USER",
+          "value": "audilis"
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "value": "audilis"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "value": "aud!1i5"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "aud!1i5"
+        },
       ]
     },
     {
@@ -36,6 +54,36 @@
         {
           "hostPort": 3000,
           "containerPort": 3000
+        }
+      ],
+      "environment": [
+        {
+          "name": "MYSQL_USER",
+          "value": "audilis"
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "value": "audilis"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "value": "aud!1i5"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "aud!1i5"
+        },
+        {
+          "name": "RAILS_ENV",
+          "value": "development"
+        },
+        {
+          "name": "MAILCHIMP_API_KEY",
+          "value": "1be94cc6d1cc0b4d729c9b1623248ea7-us11"
+        },
+        {
+          "name": "MAILCHIMP_LIST_ID",
+          "value": "647c853877"
         }
       ],
       "mountPoints": [
