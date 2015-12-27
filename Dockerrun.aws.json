@@ -92,6 +92,9 @@
           "containerPath": "/usr/src/app",
           "readOnly": false
         }
+      ],
+      "links": [
+        "db"
       ]
     },
     {
@@ -111,6 +114,9 @@
           "containerPath": "/etc/nginx/nginx.conf",
           "readOnly": true
         }
+      ],
+      "links": [
+        "web"
       ]
     }
   ]
