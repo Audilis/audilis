@@ -23,7 +23,7 @@
       "portMappings": [
         {
           "hostPort": 3306,
-          "containerPort": 13306
+          "containerPort": 3306
         }
       ],
       "environment": [

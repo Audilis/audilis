@@ -22,6 +22,6 @@ nginx:
 db:
   image: mysql
   ports:
-    - "13306:3306"
+    - "3306:3306"
   env_file:
     - '.env.db'
