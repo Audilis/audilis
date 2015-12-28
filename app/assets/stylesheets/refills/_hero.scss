@@ -8,13 +8,13 @@
   $hero-color: white;
 
   &.liag {
-    $liag-image: url(image-path('backgrounds/liag/characters.png'));
+    $liag-image: url(image-path('backgrounds/liag/title_screen.png'));
 
     //@include background(linear-gradient(top, transparent, rgba($pink, 0.2)), $liag-image);
-    @include background(linear-gradient(top, transparent 40%, rgba(darken($dark-blue, 40%), 0.3)), $liag-image center no-repeat);
+    @include background(linear-gradient(top, transparent 40%, rgba(darken($dark-blue, 40%), 0.3)), $liag-image 50% 70% no-repeat);
 
     background-color: white;
-    background-size: contain;
+    background-size: cover;
   }
 
   border-bottom: 1px solid $dark-blue;
