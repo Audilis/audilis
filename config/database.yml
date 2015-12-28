@@ -13,6 +13,7 @@ test:
 
 production:
   adapter: postgresql
+  encoding: unicode
   host: <%= ENV['RDS_HOSTNAME'] %>
   port: <%= ENV['RDS_PORT'] %>
   username: <%= ENV['RDS_USERNAME'] %>
