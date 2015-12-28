@@ -51,7 +51,7 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 
 gem 'mailchimp-api', require: 'mailchimp'
