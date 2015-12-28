@@ -37,6 +37,7 @@ gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -49,7 +50,9 @@ group :development do
   gem 'refills'
 end
 
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
 
 gem 'mailchimp-api', require: 'mailchimp'
 
