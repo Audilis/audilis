@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :identities
   resources :subscriptions, only: [:create]
 
+  get 'liag', to: 'games#show', id: 1, as: :liag
+
   root 'home#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
