@@ -56,7 +56,6 @@
   }
 
   .device {
-    display: none;
     position: relative;
 
     @include media($large-screen) {
@@ -76,7 +75,6 @@
         7px 0px $device-backside-background,
         10px 0px $device-backside-background,
         13px 0px $device-backside-background;
-      display: block;
       float: right;
       margin-bottom: -12em;
       margin-right: 5em;

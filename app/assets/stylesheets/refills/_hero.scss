@@ -7,22 +7,31 @@
 
   $hero-color: white;
 
+  @include texture(135deg, $dark-blue, $red, 86, 1);
+
   &.liag {
-    $liag-image: url(image-path('backgrounds/liag/title_screen.png'));
+    $liag-image: url(image-path('liag/backgrounds/photos.jpg'));
 
-    //@include background(linear-gradient(top, transparent, rgba($pink, 0.2)), $liag-image);
-    @include background(linear-gradient(top, transparent 40%, rgba(darken($dark-blue, 40%), 0.3)), $liag-image 50% 70% no-repeat);
+    @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 70% no-repeat);
+  }
 
+  &.landing {
+    $landing-image: url(image-path('backgrounds/liag/title_screen.png'));
+
+    @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 70% no-repeat);
+  }
+
+  &.liag,
+  &.landing {
     background-color: white;
     background-size: cover;
   }
 
-  border-bottom: 1px solid $dark-blue;
-
   .hero-logo img {
+    @include filter(drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.6)));
+
     display: block;
-    height: 3em;
-    margin: 0 auto 1em;
+    margin: auto;
 
     &.big {
       height: 16em;
@@ -34,7 +43,7 @@
     @include clearfix;
     color: $hero-color;
     margin: auto;
-    padding: 3.5em;
+    padding: 3.5em 2em;
     text-align: center;
 
     .hero-copy {
@@ -43,6 +52,7 @@
 
       h1 {
         font-size: 1.6em;
+        font-style: italic;
         margin-bottom: 0.5em;
 
         @include media($large-screen) {
@@ -51,15 +61,26 @@
       }
 
       p, q {
+        font-style: italic;
         font-weight: 200;
         line-height: 1.4em;
-        margin: 0 auto 3em auto;
-        font-style: italic;
+        margin: 0 auto 3em;
+        text-align: left;
+        text-indent: 2em;
 
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 40%;
+          max-width: 50%;
         }
+      }
+    }
+
+    .button {
+      display: block;
+      margin: 0.5em auto;
+
+      @include media($large-screen) {
+        display: inline-block;
       }
     }
 

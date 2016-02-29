@@ -1,0 +1,21 @@
+.side-image
+  .side-image-content
+    %h4 Contact Us
+    %p
+      Feel free to reach out to us:
+  .images-wrapper
+    = link_to 'http://audilisofficial.tumblr.com', target: '_blank' do
+      = icon('tumblr fa-fw fa-4x')
+    = link_to 'https://www.facebook.com/AudilisGames', target: '_blank' do
+      = icon('facebook fa-fw fa-4x')
+    = link_to 'https://twitter.com/audilisofficial', target: '_blank' do
+      = icon('twitter fa-fw fa-4x')
+    = link_to 'https://www.instagram.com/audilisofficial', target: '_blank' do
+      = icon('instagram fa-fw fa-4x')
+    %br
+    = link_to 'https://plus.google.com/b/104673219274360857218/+Audilis', target: '_blank' do
+      = icon('google-plus fa-fw fa-4x')
+    = link_to 'https://www.youtube.com/c/Audilis', target: '_blank' do
+      = icon('youtube fa-fw fa-4x')
+    = mail_to 'contact@audilis.com' do
+      = icon('envelope fa-fw fa-4x')

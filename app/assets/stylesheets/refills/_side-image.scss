@@ -29,41 +29,44 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
-    display: none;
-    width: 100%;
-    min-height: 12em;
     padding: 3em;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    &.drop-shadow img {
+      @include filter(drop-shadow(1em 1em 2em rgba(black, 0.2)));
+
+      max-width: 80%;
+    }
+
+    &.tilt-left {
+      @include transform(rotate(-10deg));
+    }
+
+    &.tilt-right {
+      @include transform(rotate(10deg));
+    }
 
     @include media($large-screen) {
-      @include span-columns(8);
+      @include span-columns(6);
+
       background-position: center;
       background-size: contain;
     }
   }
 
-  &#section_0 .images-wrapper {
-    background-image: url(image-path('backgrounds/liag/routes.png'));
-  }
-
-  &#section_1 .images-wrapper {
-    background-image: url(image-path('backgrounds/liag/story.png'));
-  }
-
-  &#section_2 .images-wrapper {
-    background-image: url(image-path('backgrounds/liag/chars.png'));
-  }
-
-  &#section_3 .images-wrapper {
-    background-image: url(image-path('logos/full/liag.png'));
-  }
-
   .side-image-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 1em;
+
+    clear: both;
+    padding: 1em 1em 4em;
+    text-align: left;
+    vertical-align: middle;
 
     @include media($large-screen) {
-      @include span-columns(8);
-      padding: 4em 4em 8em 4em;
+      @include span-columns(6);
+      padding: 4em 4em 8em;
     }
 
     h1 {
@@ -79,20 +82,24 @@
       font-style: italic;
     }
 
-    //h4 {
-    //  background: #BBB;
-    //  color: white;
-    //  display: inline-block;
-    //  font-size: 0.75em;
-    //  font-weight: 800;
-    //  margin-bottom: 1.3em;
-    //  padding: 3px 8px;
-    //  text-transform: uppercase;
-    //}
+    ul {
+      list-style: disc;
+    }
+
+    dt {
+      color: gray;
+      font-size: 1.25em;
+    }
+
+    dd {
+      color: gray;
+      font-style: italic;
+    }
 
     p {
       color: gray;
       margin-bottom: 3em;
+      text-indent: 1em;
     }
   }
 

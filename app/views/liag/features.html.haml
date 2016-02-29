@@ -1,0 +1,21 @@
+- content_for(:hero) do
+  .hero
+    .hero-inner
+      .hero-copy
+        .side-image
+          .side-image-content
+            %h1 Features
+            %hr
+            %ul
+              %li Six routes and six romanceable characters
+              %li 100% original artwork, characters, and backgrounds
+              %li 10+ choices per route (60+ total)
+              %li 3 different endings per route (based on your decisions)
+              %li 3+ cutscene CGs per route (20+ total)
+              %li Customizable text display and speed
+              %li Customizeble main character name
+              %li Original soundtrack
+              %li Beta access for early adopters
+          .images-wrapper
+            = image_tag 'liag/sprites/alister.png'
+        = link_to 'Explore Characters', characters_liag_path, class: 'button'

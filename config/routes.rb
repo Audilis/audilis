@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   resources :identities
   resources :subscriptions, only: [:create]
 
-  get 'liag', to: 'games#show', id: 1, as: :liag
+  resource :liag, only: [:show], controller: :liag do
+    get :characters
+    get :features
+    get :faq
+  end
 
   root 'home#show'
 

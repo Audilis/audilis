@@ -10,7 +10,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-    @sections = @game.description.split("\n").reject(&:blank?).compact
+    redirect_to liag_path
   end
 
   # GET /games/new

@@ -4,15 +4,15 @@
   .footer-links
     %ul
       %li
-        %h3 Content
+        %h3 Love is a Game
       %li
-        = link_to 'Games', Game.first
-      -#%li
-        = link_to 'Team', team_path
-      -#%li
-        = link_to 'Contact', new_contact_path
-      -#%li
-        = link_to 'About Us', about_path
+        = link_to 'Overview', liag_path
+      %li
+        = link_to 'Characters', characters_liag_path
+      %li
+        = link_to 'Features', features_liag_path
+      %li
+        = link_to 'FAQ', faq_liag_path
     %ul
       %li
         %h3 Follow Us
@@ -40,12 +40,18 @@
         = link_to 'https://www.youtube.com/c/Audilis', target: '_blank' do
           = icon('youtube fa-fw')
           YouTube
-    -#%ul
+    %ul
       %li
-        %h3 Legal
+        %h3 Audilis
       %li
+        = link_to 'About Us', root_path
+      %li
+        = link_to 'Our Team', team_path
+      %li
+        = link_to 'Contact Us', new_contact_path
+      -#%li
         = link_to 'Terms and Conditions', terms_legal_path
-      %li
+      -#%li
         = link_to 'Privacy Policy', privacy_legal_path
   %hr
   %p
