@@ -230,7 +230,7 @@ header.navigation {
       opacity: 0;
       pointer-events: none;
       position: absolute;
-      top: $navigation-height - 30px;
+      top: $navigation-height / 2;
     }
 
     .submenu {
