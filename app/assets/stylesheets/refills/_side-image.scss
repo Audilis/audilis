@@ -29,6 +29,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
+    overflow: hidden;
     padding: 3em;
     text-align: center;
     vertical-align: middle;
@@ -40,11 +41,11 @@
       max-width: 80%;
     }
 
-    &.tilt-left {
+    &.tilt-left img {
       @include transform(rotate(-10deg));
     }
 
-    &.tilt-right {
+    &.tilt-right img {
       @include transform(rotate(10deg));
     }
 
