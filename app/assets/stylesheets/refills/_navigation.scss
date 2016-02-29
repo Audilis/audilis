@@ -318,7 +318,7 @@ header.navigation {
     width: 100%;
 
     .sub-text {
-      color: $gray;
+      color: $green;
       font-size: 80%;
       text-align: center;
     }
@@ -371,7 +371,9 @@ header.navigation {
 
     @include media($horizontal-bar-mode) {
       display: inline-block;
-      position: relative;
+      position: fixed;
+      top: 0;
+      right: 3em;
       width: 16em;
 
       input {
