@@ -60,13 +60,14 @@
     @include span-columns(12);
 
     clear: both;
+    display: block;
     padding: 1em 1em 4em;
     text-align: left;
     vertical-align: middle;
 
-    @include media($large-screen) {
-      @include span-columns(6);
-      padding: 4em 4em 8em;
+    .button {
+      display: block;
+      margin: 0.25em auto;
     }
 
     h1 {
@@ -100,6 +101,15 @@
       color: gray;
       margin-bottom: 3em;
       text-indent: 1em;
+    }
+
+    @include media($large-screen) {
+      @include span-columns(6);
+      padding: 4em 4em 8em;
+
+      .button {
+        display: inline-block;
+      }
     }
   }
 

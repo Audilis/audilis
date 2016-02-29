@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on 'ready page:load', ->
   menuToggle = $("#js-mobile-menu").unbind()
   $("#js-navigation-menu").removeClass "show"
   menuToggle.on "click", (e) ->
@@ -10,4 +10,3 @@ $(document).ready ->
     return
 
   return
-
