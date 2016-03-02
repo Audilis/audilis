@@ -7,7 +7,7 @@
 
   $hero-color: white;
 
-  //@include texture(135deg, $dark-blue, $red, 86, 1);
+  @include texture(135deg, $dark-blue, $red, 86, 1);
 
   &.liag {
     $liag-image: url(image-path('liag/backgrounds/photos.jpg'));
