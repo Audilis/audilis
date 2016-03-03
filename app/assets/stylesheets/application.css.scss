@@ -23,16 +23,20 @@
 @import "refills/footer";
 @import "refills/side-image";
 @import "refills/device";
+@import "refills/type-system-slab";
 
 /*
  * Application styles
  */
 @import 'shared/fonts';
+@import 'contact';
 
 /*
  * Style overrides
  */
 body {
+  color: gray;
+  
   margin:   0;
   padding:  0;
 

@@ -1,0 +1,22 @@
+$large-screen: em(860) !default
+
+.centered-form
+  @include span-columns(10)
+  @include shift(1)
+
+  margin-top: 1em
+  text-align: center
+
+  input[type='submit']
+    margin: 1em auto
+    width: 100%
+
+  .g-recaptcha div
+    margin: 0 auto
+
+  @include media($large-screen)
+    @include span-columns(6)
+    @include shift(3)
+
+    input[type='submit']
+      width: auto

@@ -29,11 +29,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
-    overflow: hidden;
     padding: 3em;
     text-align: center;
     vertical-align: middle;
     width: 100%;
+    max-width: 100%;
 
     &.drop-shadow img {
       @include filter(drop-shadow(1em 1em 2em rgba(black, 0.2)));
@@ -66,40 +66,15 @@
     text-align: left;
     vertical-align: middle;
 
-    .button {
-      display: block;
-      margin: 0.25em auto;
-    }
-
-    h1 {
-      margin-bottom: 0.9em;
-    }
-
-    h4 {
-      font-size: 1.5em;
-      border-bottom: 1px solid rgba(gray, 0.2);
-      margin-bottom: 0.5em;
-      padding-bottom: 0.5em;
-      color: gray;
-      font-style: italic;
-    }
-
     ul {
       list-style: disc;
     }
 
-    dt {
-      color: gray;
-      font-size: 1.25em;
-    }
-
     dd {
-      color: gray;
       font-style: italic;
     }
 
     p {
-      color: gray;
       margin-bottom: 3em;
       text-indent: 1em;
     }
@@ -107,10 +82,6 @@
     @include media($large-screen) {
       @include span-columns(6);
       padding: 4em 4em 8em;
-
-      .button {
-        display: inline-block;
-      }
     }
   }
 
