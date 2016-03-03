@@ -37,8 +37,6 @@
 
     &.drop-shadow img {
       @include filter(drop-shadow(1em 1em 2em rgba(black, 0.2)));
-
-      max-width: 80%;
     }
 
     &.tilt-left img {

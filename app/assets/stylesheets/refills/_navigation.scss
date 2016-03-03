@@ -32,6 +32,10 @@ header.navigation {
   width: 100%;
   z-index: 9999;
 
+  @include media($large-screen) {
+    box-shadow: 0 0 3em rgba(black, 0.2);
+  }
+  
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
