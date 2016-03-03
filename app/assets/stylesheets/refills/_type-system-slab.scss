@@ -10,16 +10,9 @@
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
 
-  h1, h2, h3, p {
-    margin: 0;
-  }
-
   hr {
-    border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    margin: $base-spacing 0;
+    margin: 0 auto 1em;
+    max-width: 16em;
   }
 
   p {
