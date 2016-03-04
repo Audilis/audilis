@@ -19,9 +19,14 @@
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
   background: $side-image-content-background;
+  padding: 1em 0.5em;
 
   @include media($large-screen) {
     @include row(table);
+
+    &:nth-of-type(2n-1) {
+      direction: rtl;
+    }
   }
 
   .images-wrapper {
@@ -59,10 +64,15 @@
     @include span-columns(12);
 
     clear: both;
+    direction: ltr;
     display: block;
     padding: 1em 1em 4em;
     text-align: left;
     vertical-align: middle;
+
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
 
     ul {
       list-style: disc;
@@ -74,7 +84,7 @@
 
     p {
       margin-bottom: 3em;
-      text-indent: 1em;
+      text-indent: 2em;
     }
 
     @include media($large-screen) {

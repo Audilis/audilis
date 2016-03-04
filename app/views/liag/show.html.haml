@@ -2,44 +2,49 @@
   = render 'liag/hero'
 
 .side-image
+  .images-wrapper
+    = image_tag 'backgrounds/liag/routes.png'
   .side-image-content
     %h1 Six Routes
+    %hr
     %p
       Dive into the beautiful otome that takes you further than just falling in love. With six routes to explore, Love is a Game offers six distinct romances, six unique characters, and dozens of choices to change the outcome of your heroine’s tale.
     = link_to 'View Features', features_liag_path, class: 'button'
-  .images-wrapper
-    = image_tag 'backgrounds/liag/routes.png'
 
 .side-image
   .images-wrapper
     = image_tag 'backgrounds/liag/story.png'
   .side-image-content
     %h1 Immersive Story
+    %hr
     %p
       Enjoy breathtaking art and character portrayal as you journey through the life of a girl who’s wish for a story-worthy love life has just been granted.
     = link_to 'Discover More', features_liag_path, class: 'button'
 
 .side-image
+  .images-wrapper
+    = image_tag 'backgrounds/liag/chars.png'
   .side-image-content
     %h1 Relatable Characters
+    %hr
     %p
       Our artistic otome brings relatable challenges and hardships to the game, by creating a story riddled with the realistic struggle of pursuing happiness and a dream romance.
     = link_to 'Explore Characters', characters_liag_path, class: 'button'
-  .images-wrapper
-    = image_tag 'backgrounds/liag/chars.png'
 
 .side-image
   .images-wrapper.drop-shadow
     = image_tag 'liag/logos/large.png'
   .side-image-content
     %h1 Labor of Love
+    %hr
     %p
       This union of stunning graphics and captivating story is the first of Audilis’s Creations: Love is a Game.This union of stunning graphics and captivating story is the first of Audilis’s creations: Love is a Game.
     = link_to 'Meet the Team', team_path, class: 'button'
 
 .device-background
   .device-text
-    %h1 Built on Unreal Engine 4
+    %h1 Made For All
+    %hr
     %p
       We will ship both the initial demo as well as the final product using
       #{ link_to 'Epic', 'http://epic.com', target: '_blank' }'s robust
