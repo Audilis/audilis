@@ -12,10 +12,10 @@
   &.liag {
     $liag-image: url(image-path('liag/backgrounds/photos.jpg'));
 
-    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $liag-image no-repeat);
+    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 50% no-repeat);
 
     @include media($large-screen) {
-      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image no-repeat);
+      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 50% no-repeat);
     }
   }
 
