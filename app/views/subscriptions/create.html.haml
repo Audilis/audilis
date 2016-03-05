@@ -1,6 +1,13 @@
-%section
+- content_for :page_title, 'Thank You'
+- content_for :meta_title, 'Thank You'
+- content_for :meta_description, 'You have been subscribed to our newsletter.'
+- content_for :meta_url, subscription_url
+- content_for :meta_image, image_path('liag/chibis/jin_cake.png')
+
+.centered
   %h1 Thank You
+  %hr
+  %div= image_tag 'liag/chibis/jin_cake.png'
+  %hr
   %p
-    Please check your email
-    %mark= @email
-    to confirm your subscription to our newsletter.
+    Please check your email to confirm your subscription to our newsletter.

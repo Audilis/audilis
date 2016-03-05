@@ -1,2 +1,7 @@
 - content_for(:hero) do
   = render "shared/heros/landing"
+
+- content_for :meta_title, 'Audilis'
+- content_for :meta_description, 'Audilis, an otome game development company.'
+- content_for :meta_url, root_url
+- content_for :meta_image, image_path('liag/chibis/willow.png')

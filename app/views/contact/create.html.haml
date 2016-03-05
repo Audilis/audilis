@@ -1,9 +1,15 @@
+- content_for :page_title, 'Thank You'
+- content_for :meta_title, 'Thank You'
+- content_for :meta_description, 'Your message has been received.'
+- content_for :meta_url, contact_url
+- content_for :meta_image, image_path('liag/chibis/jin_cake.png')
+
 .centered
   %h1 Thank you!
   %hr
-  We will get back to you soon.
-  %br
-  Meanwhile, please connect with us:
+  %div= image_tag 'liag/chibis/jin_cake.png'
+  %div We will get back to you soon.
+  %div Meanwhile, please connect with us:
   %hr
 
   = link_to tumblr_url, target: '_blank' do
