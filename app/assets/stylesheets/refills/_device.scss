@@ -84,7 +84,7 @@
       margin-right: 5em;
       padding: $device-padding-vertical 0;
       width: $device-screen-width + (2 * $device-padding-horizontal);
-      z-index: 99999;
+      z-index: 999;
 
       .screen {
         @include size($device-screen-width $device-screen-height);

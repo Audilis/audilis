@@ -40,7 +40,9 @@ body {
   margin:   0;
   padding:  0;
 
-  //@include texture(135deg, $dark-blue, $red, 86, 1);
+  @include media($large-screen) {
+    margin-top: $header-height;
+  }
 }
 
 main {

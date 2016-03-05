@@ -44,4 +44,6 @@ $base-duration: 150ms;
 $base-timing: ease;
 
 // Navigation
-$header-height: 72px
+$header-height: 80px;
+
+$large-screen: em(860) !default;

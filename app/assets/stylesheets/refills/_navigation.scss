@@ -15,7 +15,7 @@ header.navigation {
   $navigation-color-hover: $dark-green;
   $navigation-alt-color: $dark-blue;
   $navigation-alt-color-hover: darken($dark-blue, 20%);
-  $navigation-height: 80px;
+  $navigation-height: $header-height;
   $navigation-nav-button-background: $base-accent-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
@@ -33,6 +33,8 @@ header.navigation {
   z-index: 9999;
 
   @include media($large-screen) {
+    @include position(fixed, 0px 0px auto 0px);
+
     box-shadow: 0 0 3em rgba(black, 0.2);
   }
 
@@ -54,6 +56,9 @@ header.navigation {
     img {
       max-height: $navigation-height;
       padding: 0.4em 0;
+    }
+
+    @include media($large-screen){
     }
   }
 
@@ -318,7 +323,7 @@ header.navigation {
 
     float: left;
     margin: 0;
-    padding: 1em 0.6em 0 0.6em;
+    padding: 1em 0 0;
     width: 100%;
 
     .sub-text {
@@ -416,11 +421,7 @@ header.navigation {
     }
 
     @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: fixed;
-      top: 0;
-      right: 3em;
-      width: 16em;
+      min-width: 225px;
 
       &.modal::before {
         border-radius: $base-border-radius * 4;
