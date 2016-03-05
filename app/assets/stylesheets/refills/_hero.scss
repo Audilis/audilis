@@ -12,25 +12,26 @@
   &.liag {
     $liag-image: url(image-path('liag/backgrounds/photos.jpg'));
 
-    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 70% no-repeat);
+    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $liag-image no-repeat);
 
     @include media($large-screen) {
-      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 70% no-repeat);
+      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image no-repeat);
     }
   }
 
   &.landing {
     $landing-image: url(image-path('backgrounds/liag/title_screen.png'));
 
-    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 70% no-repeat);
+    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 100% no-repeat);
 
     @include media($large-screen) {
-      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 70% no-repeat);
+      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 100% no-repeat);
     }
   }
 
   &.liag,
   &.landing {
+    background-attachment: scroll, fixed;
     background-size: cover;
   }
 
