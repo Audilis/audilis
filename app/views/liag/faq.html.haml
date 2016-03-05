@@ -1,7 +1,61 @@
 .centered
   %h1 Frequently Asked Questions
+  %hr
+
+  %h2 How old is Audilis (and Love is a Game)?
+  %p We started Audilis in March of 2015 when our developer approached our project director about making a game. While they began working on ideas, they decided to expand the team and hired the remaining members. LiaG preparations started shortly after and we've been working on it ever since.
+  %hr
+
+  %h2 Who are the people creating the game?
   %p
-    Coming soon...
+    Audilis consists of 9 team members. There are 2 writers, 4 artists, a UI designer, a developer and project director. We are all otome fans and avid gamers and we’ve been having a blast lately with recent developments and the magnificent interactions we have with our fans. Please check out our
+    = link_to 'team page', team_path
+    for links to our personal blogs to learn more about us!
+  %hr
+
+  %h2 What platforms will the game support?
+  %p Love is a Game is being developed for iOS and Android for its initial release. Once we have a finished game with all six routes completed, we will provide the game for Windows, Mac, and Linux. Development for all platforms is being done at the same time, so Windows/Mac/Linux will see a same-day release.
+  %hr
+
+  %h2 How much will routes cost?
+  %p We’re aiming to price LiaG main routes around $3 USD. The prologue will be free, as well as the first chapters as the routes are being released. The price for the Windows/Mac/Linux version is yet to be determined, but will include all six main routes.
+  %hr
+
+  %h2 When will LiaG's first route be released?
+  %p LiaG is Audilis' first otome project and we are planning to launch our Kickstarter in June. We cannot give an exact date as to when we will release our first route, but we hope to be funded and ready to release a route by fall of 2016.
+  %hr
+
+  %h2 Is it okay if I make fanart/fanfics for LiaG?
+  %p Absolutely! We highly encourage our fans to express themselves and their creativity. We share fanart on our blog so other fans can appreciate it too!
+  %hr
+
+  %h2 Where can I find more information/updates about the game and its progress?
+  %p
+    Our
+    = link_to tumblr_url do
+      = icon('tumblr')
+      Tumblr
+    page is frequently updated with events, questions sent by fans and progress of the game's development.
+  %p
+    New information and concept art can be exclusively found on our
+    = link_to facebook_url do
+      = icon('facebook')
+      Facebook
+    page and we're starting to build up out
+    = link_to twitter_url do
+      = icon('twitter')
+      Twitter
+    and
+    = link_to instagram_url do
+      = icon('instagram')
+      Instagram
+    as well!
+  %p
+    Finally, if you don't want to miss a beat, be sure to
+    = link_to 'subscribe', 'javascript:void(0);', onclick: '$(".email-bar").addClass("modal");$("#subscription_email").focus();'
+    to our email newsletter!
+  %hr
+
   = link_to 'Love is a Game', liag_path, class: 'button'
   = link_to 'View Features', features_liag_path, class: 'button'
   = link_to 'Explore Characters', characters_liag_path, class: 'button'

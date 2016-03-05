@@ -35,7 +35,7 @@ header.navigation {
   @include media($large-screen) {
     box-shadow: 0 0 3em rgba(black, 0.2);
   }
-  
+
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -327,6 +327,13 @@ header.navigation {
       text-align: center;
     }
 
+    .close {
+      display: none;
+      position: fixed;
+      top: 1em;
+      right: 1em;
+    }
+
     form {
       position: relative;
 
@@ -374,12 +381,58 @@ header.navigation {
       }
     }
 
+    &.modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      text-align: center;
+      margin: auto;
+      height: 120px;
+      width: 280px;
+
+      &::before {
+        content: '';
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        background: rgba(black, 0.85);
+      }
+
+      .sub-text {
+        font-size: 120%;
+      }
+
+      .close {
+        display: block;
+      }
+    }
+
     @include media($horizontal-bar-mode) {
       display: inline-block;
       position: fixed;
       top: 0;
       right: 3em;
       width: 16em;
+
+      &.modal::before {
+        border-radius: $base-border-radius * 4;
+        margin: auto;
+        width: 60%;
+        height: 40%;
+      }
+
+      .close {
+        top: 31%;
+        right: 21%;
+      }
 
       input {
         @include box-sizing(border-box);

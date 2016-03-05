@@ -1,5 +1,8 @@
 .centered
   %h1 Contact Us
+  %hr
+
+  = render 'shared/form_errors', resource: @message
 
   = form_for @message, url: contact_path do |form|
     = form.text_field :name, placeholder: 'Name'

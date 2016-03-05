@@ -1,37 +1,38 @@
 .side-image
-  .images-wrapper
-    = image_tag 'backgrounds/liag/story.png'
+  .images-wrapper.drop-shadow
+    = image_tag 'liag/chibis/willow.png'
   .side-image-content
     %h1 100% Original Artwork
     %hr
     %p We are making every cutscene, sprite, and background ourselves in order to provide an immersive world and consistent experience.
 
 .side-image
-  .images-wrapper
-    = image_tag 'backgrounds/liag/chars.png'
+  .images-wrapper.drop-shadow
+    = image_tag 'liag/chibis/milo.png'
   .side-image-content
     %h1 30+ CGs
     %hr
     %p Each route will feature at least five gorgeous custscene images that can be unlocked throughout the story.
 
 .side-image
-  .images-wrapper
+  .images-wrapper.drop-shadow
+    = image_tag 'liag/chibis/jin.png'
   .side-image-content
     %h1 18 Possible Endings
     %hr
     %p With three different endings for each of the six storylines, there is plenty of replay value. Your ending depends on the choices you make, so choose wisely!
 
 .side-image
-  .images-wrapper
-    = image_tag 'backgrounds/liag/routes.png'
+  .images-wrapper.drop-shadow
+    = image_tag 'liag/chibis/dimitri.png'
   .side-image-content
     %h1 Six Routes
     %hr
     %p Each route features a unique experience. Six romanceable character each offer their own personality and flaws that you will need to approach differently.
-    = link_to 'Explore Characters', characters_liag_path, class: 'button'
 
 .side-image
-  .images-wrapper
+  .images-wrapper.drop-shadow
+    = image_tag 'liag/chibis/alister.png'
   .side-image-content
     %h1 Gameplay Your Way
     %hr
@@ -41,3 +42,8 @@
       %li Simple and beautiful interface
       %li Autosave and quick save/load
       %li Much more...
+
+.centered
+  = link_to 'Love is a Game', liag_path, class: 'button'
+  = link_to 'Explore Characters', characters_liag_path, class: 'button'
+  = link_to 'Read the FAQ', faq_liag_path, class: 'button'

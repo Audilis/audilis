@@ -16,4 +16,5 @@
 # end
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym 'LiaG'
+  inflect.acronym 'URL'
 end

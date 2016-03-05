@@ -1,0 +1,10 @@
+- if resource and resource.errors.any?
+  .form-errors
+    %h2
+      Hey, we found some problems:
+    %p
+      %ol
+        - resource.errors.full_messages.each do |msg|
+          %li!= msg
+      = link_to 'Okay, got it', 'javascript:void(0)', class: 'button', onclick: '$(".form-errors").remove();'
+    %hr

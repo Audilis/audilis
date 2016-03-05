@@ -30,4 +30,7 @@
             %button{:type => "submit"}
               = icon('envelope fa-fw')
           .sub-text Sign up for our newsletter
+          .close
+            = link_to 'javascript:void(0);', onclick: '$(".email-bar").removeClass("modal");' do
+              = icon('times-circle fa-4x')
         -#%a.button.sign-in{:href => "javascript:void(0)" } Sign In
