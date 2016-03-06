@@ -5,7 +5,7 @@ class QuizController < ApplicationController
   def show
     @winner = params[:id].downcase
 
-    if valid_character?
+    if valid_character?(@winner)
       render
     else
       render :new
@@ -13,6 +13,10 @@ class QuizController < ApplicationController
   end
 
   def new
+    if valid_character?(params[:referrer])
+      @referrer = params[:referrer]
+    end
+    
     @quiz = YAML::load_file(DEFAULT).with_indifferent_access
   end
 
@@ -24,7 +28,7 @@ class QuizController < ApplicationController
     params.require(:quiz).permit(:result)
   end
 
-  def valid_character?
-    CHARACTERS.include?(@winner)
+  def valid_character?(character)
+    CHARACTERS.include?(character)
   end
 end

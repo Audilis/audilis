@@ -24,7 +24,7 @@ module URLHelper
   end
 
   def tumblr_share_url(url)
-    "http://tumblr.com/widgets/share/tool?canonicalUrl=#{url}"
+    "http://tumblr.com/widgets/share/tool?canonicalUrl=#{u(url)}&posttype=link"
   end
 
   def facebook_share_url(url)
@@ -38,10 +38,10 @@ module URLHelper
   end
 
   def twitter_share_url(url)
-    "http://twitter.com/share?url=#{url}"
+    "http://twitter.com/share?url=#{u(url)}"
   end
 
   def google_share_url(url)
-    "https://plus.google.com/share?url=#{url}"
+    "https://plus.google.com/share?url=#{u(url)}"
   end
 end

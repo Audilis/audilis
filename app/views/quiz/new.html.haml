@@ -1,7 +1,8 @@
 - content_for :page_title, 'Quiz'
 - content_for :meta_title, 'Quiz'
 - content_for :meta_description, 'Take the Love is a Game compatability quiz!'
-- content_for :meta_url, new_quiz_url
+- content_for :meta_url, new_quiz_url(referrer: @referrer)
+- content_for :meta_image, image_url("liag/chibis/quiz/#{@referrer}.png") if @referrer.present?
 - content_for(:hero) do
   .hero
     .hero-inner
