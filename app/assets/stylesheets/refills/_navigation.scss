@@ -1,3 +1,15 @@
+.return-to-top {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 999;
+  color: $green;
+
+  &:focus, &:hover {
+    color: $dark-green;
+  }
+}
+
 header.navigation {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;

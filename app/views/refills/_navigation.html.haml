@@ -1,36 +1,39 @@
-%body
-  %header.navigation{:role => "banner"}
-    .navigation-wrapper
-      = link_to root_path, class: 'logo' do
-        = image_tag('logos/full/audilis.png', alt: 'Audilis')
-      %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
-      %nav{:role => "navigation"}
-        %ul#js-navigation-menu.navigation-menu.show
-          %li.nav-link.more
-            = link_to 'Love Is A Game', 'javascript:void(0);'
-            %ul.submenu
-              %li
-                = link_to 'Overview', liag_path
-              %li
-                = link_to 'Characters', characters_liag_path
-              %li
-                = link_to 'Features', features_liag_path
-              %li
-                = link_to 'FAQ', faq_liag_path
-          %li.nav-link
-            = link_to 'Blog', 'http://blog.audilis.com', target: '_blank'
-          %li.nav-link
-            = link_to 'Our Team', team_path
-          %li.nav-link
-            = link_to 'Contact Us', new_contact_path
-      .navigation-tools
-        .email-bar
-          = form_for :subscription, url: subscriptions_path do |fields|
-            = fields.email_field :email, placeholder: 'Subscribe'
-            %button{:type => "submit"}
-              = icon('envelope fa-fw')
-          .sub-text Sign up for our newsletter
-          .close
-            = link_to 'javascript:void(0);', onclick: '$(".email-bar").removeClass("modal");' do
-              = icon('times-circle fa-4x')
-        -#%a.button.sign-in{:href => "javascript:void(0)" } Sign In
+= link_to 'javascript:void(0);', class: 'return-to-top', onclick: '$("html,body").animate({scrollTop:0},400);' do
+  = icon('chevron-up fa-2x')
+
+%header.navigation{:role => "banner"}
+  .navigation-wrapper
+    = link_to root_path, class: 'logo' do
+      = image_tag('logos/full/audilis.png', alt: 'Audilis')
+    %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"}
+      MENU
+    %nav{:role => "navigation"}
+      %ul#js-navigation-menu.navigation-menu.show
+        %li.nav-link.more
+          = link_to 'Love Is A Game', 'javascript:void(0);'
+          %ul.submenu
+            %li
+              = link_to 'Overview', liag_path
+            %li
+              = link_to 'Characters', characters_liag_path
+            %li
+              = link_to 'Features', features_liag_path
+            %li
+              = link_to 'FAQ', faq_liag_path
+        %li.nav-link
+          = link_to 'Blog', 'http://blog.audilis.com', target: '_blank'
+        %li.nav-link
+          = link_to 'Our Team', team_path
+        %li.nav-link
+          = link_to 'Contact Us', new_contact_path
+    .navigation-tools
+      .email-bar
+        = form_for :subscription, url: subscriptions_path do |fields|
+          = fields.email_field :email, placeholder: 'Subscribe'
+          %button{:type => "submit"}
+            = icon('envelope fa-fw')
+        .sub-text Sign up for our newsletter
+        .close
+          = link_to 'javascript:void(0);', onclick: '$(".email-bar").removeClass("modal");' do
+            = icon('times-circle fa-4x')
+      -#%a.button.sign-in{:href => "javascript:void(0)" } Sign In
