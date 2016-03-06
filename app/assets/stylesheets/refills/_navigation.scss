@@ -4,9 +4,11 @@
   right: 1em;
   z-index: 999;
   color: $green;
+  opacity: 0.65;
 
   &:focus, &:hover {
     color: $dark-green;
+    opacity: 1;
   }
 }
 

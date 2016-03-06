@@ -1,0 +1,16 @@
+- content_for :page_title, 'Quiz'
+- content_for :meta_title, 'Quiz'
+- content_for :meta_description, 'Take the Love is a Game compatability quiz!'
+- content_for :meta_url, new_quiz_url
+- content_for(:hero) do
+  .hero
+    .hero-inner
+      .hero-logo
+        = image_tag 'liag/logos/quiz.png'
+
+.centered.quiz
+  - @quiz.each_pair do |id, question|
+    .question{ id: id, class: ('active' if id == 'A') }
+      %h1= question[:text]
+      - question[:answers].each do |answer|
+        = link_to answer[:text], "javascript:void(0);", data: { result: answer[:result] }

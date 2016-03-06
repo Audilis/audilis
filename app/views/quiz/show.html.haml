@@ -1,0 +1,23 @@
+- content_for :page_title, @winner.titleize
+- content_for :meta_title, @winner.titleize
+- content_for :meta_description, 'The Love is a Game compatability quiz!'
+- content_for :meta_url, quiz_url(@winner)
+- content_for :meta_image, image_url("liag/chibis/quiz/#{@winner}.png")
+
+.centered
+  %h1 Your match is...
+  %hr
+  .matched-result= image_tag "liag/chibis/quiz/#{@winner}.png", alt: @winner.titleize
+  = link_to "Read more about #{@winner.titleize}", characters_liag_path(anchor: @winner), class: 'button'
+  %hr
+  %h3 Share the quiz!
+  = link_to tumblr_share_url(new_quiz_url), target: '_blank' do
+    = icon('tumblr-square fa-3x')
+  = link_to facebook_share_url(new_quiz_url) do
+    = icon('facebook-square fa-3x')
+  = link_to twitter_share_url(new_quiz_url), target: '_blank' do
+    = icon('twitter-square fa-3x')
+  = link_to google_share_url(new_quiz_url), target: '_blank' do
+    = icon('google-plus-square fa-3x')
+    %hr
+  = link_to "Take the quiz again!", new_quiz_path

@@ -22,4 +22,26 @@ module URLHelper
   def instagram_url
     'https://www.instagram.com/audilisofficial'
   end
+
+  def tumblr_share_url(url)
+    "http://tumblr.com/widgets/share/tool?canonicalUrl=#{url}"
+  end
+
+  def facebook_share_url(url)
+    """
+      javascript:FB.ui({
+        method: 'share',
+        href: '#{url}',
+      }, function(response){});
+      void(0);
+    """
+  end
+
+  def twitter_share_url(url)
+    "http://twitter.com/share?url=#{url}"
+  end
+
+  def google_share_url(url)
+    "https://plus.google.com/share?url=#{url}"
+  end
 end

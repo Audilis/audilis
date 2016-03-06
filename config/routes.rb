@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :games
   resources :identities
   resources :subscriptions, only: [:create]
+  resources :quiz, only: [:new, :create, :show], controller: :quiz
 
   resource :liag, only: [:show], controller: :liag do
     get :characters

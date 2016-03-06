@@ -1,0 +1,70 @@
+A:
+  text: "Do you prefer a romance that's..."
+  answers:
+    - text: "Heart-warming"
+      result: B
+    - text: "Heart-pounding"
+      result: C
+B:
+  text: "Do you prefer to be comforted with..."
+  answers:
+    - text: "Words"
+      result: E
+    - text: "Actions"
+      result: D
+C:
+  text: "You want to hear he lovers you..."
+  answers:
+    - text: "Every day"
+      result: D
+    - text: "When he feels like it"
+      result: F
+D:
+  text: "You prefer when he..."
+  answers:
+    - text: "Tells you his feelings"
+      result: E
+    - text: "Shows you his feelings"
+      result: F
+E:
+  text: "You prefer a guy who is..."
+  answers:
+    - text: "More talkative"
+      result: G
+    - text: "More reserved"
+      result: H
+F:
+  text: "It means more when he makes you feel..."
+  answers:
+    - text: "Special"
+      result: I
+    - text: "Beautiful"
+      result: H
+G:
+  text: "It means more when he makes you feel..."
+  answers:
+    - text: "Beautiful"
+      result: Dimitri
+    - text: "Special"
+      result: Milo
+H:
+  text: "You want a relationship in which..."
+  answers:
+    - text: "You take care of him"
+      result: I
+    - text: "He takes care of you"
+      result: Faust
+I:
+  text: "Do you prefer someone who is..."
+  answers:
+    - text: "Gentle"
+      result: Jin
+    - text: "Passionate"
+      result: J
+J:
+  text: "The key to a good relationship is..."
+  answers:
+    - text: "Taking care of each other"
+      result: Enzo
+    - text: "Relying on each other"
+      result: Alister
