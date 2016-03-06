@@ -13,7 +13,7 @@ B:
     - text: "Actions"
       result: D
 C:
-  text: "You want to hear he lovers you..."
+  text: "You want to hear he loves you..."
   answers:
     - text: "Every day"
       result: D

@@ -13,10 +13,12 @@ class QuizController < ApplicationController
   end
 
   def new
-    if valid_character?(params[:referrer])
-      @referrer = params[:referrer]
+    referrer = params[:referrer].try(:downcase)
+
+    if valid_character?(referrer)
+      @referrer = referrer
     end
-    
+
     @quiz = YAML::load_file(DEFAULT).with_indifferent_access
   end
 
