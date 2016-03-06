@@ -30,12 +30,12 @@
           = link_to 'Contact Us', new_contact_path
     .navigation-tools
       .email-bar
+        .close
+          = link_to 'javascript:void(0);', onclick: '$(".email-bar").removeClass("modal");' do
+            = icon('times-circle fa-4x')
         = form_for :subscription, url: subscriptions_path do |fields|
           = fields.email_field :email, placeholder: 'Subscribe'
           %button{:type => "submit"}
             = icon('envelope fa-fw')
         .sub-text Sign up for our newsletter
-        .close
-          = link_to 'javascript:void(0);', onclick: '$(".email-bar").removeClass("modal");' do
-            = icon('times-circle fa-4x')
       -#%a.button.sign-in{:href => "javascript:void(0)" } Sign In

@@ -409,8 +409,8 @@ header.navigation {
 
       text-align: center;
       margin: auto;
-      height: 120px;
       width: 280px;
+      height: 80px;
 
       &::before {
         content: '';
@@ -440,13 +440,15 @@ header.navigation {
       &.modal::before {
         border-radius: $base-border-radius * 4;
         margin: auto;
-        width: 60%;
-        height: 40%;
+        width: 400px;
+        height: 160px;
       }
 
       .close {
-        top: 31%;
-        right: 21%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: -3.3em -4.3em 0 0
       }
 
       input {
