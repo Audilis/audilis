@@ -7,10 +7,13 @@
     %meta{ name: "viewport", content: "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" }
     %meta{ name: "theme-color", content: "#D18687" }
     %meta{ property: "og:site_name", content: "Audilis"}
+    - if ENV['FACEBOOK_APP_ID'].present?
+      %meta{ property: 'fb:app_id', content: ENV['FACEBOOK_APP_ID'] }
     - if content_for?(:meta_keywords)
       %meta{ name: "keywords", content: content_for(:meta_keywords) }
     - if content_for?(:meta_title)
       %meta{ name: "title", content: content_for(:meta_title) }
+      %meta{ property: "og:title", content: content_for(:meta_title) }
     - if content_for?(:meta_description)
       %meta{ name: "description", content: content_for(:meta_description) }
       %meta{ property: "og:description", content: content_for(:meta_description) }
