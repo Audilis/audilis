@@ -15,7 +15,7 @@ select {
 
 label {
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  margin: $small-spacing / 2;
 
   &.required::after {
     content: "*";
@@ -87,4 +87,15 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+}
+
+@include media($large-screen) {
+  label {
+    text-align: left;
+  }
+
+  input[type=submit] {
+    display: block;
+    float: none;
+  }
 }

@@ -19,14 +19,10 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: url(asset-path('backgrounds/footer.png'));
+  $footer-background: url(asset-path('backgrounds/footer.jpg'));
   $footer-color: $purple;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
-
-  //@include background(linear-gradient(top, transparent, $blue), $footer-background);
-
-  @include background($footer-background);
 
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -41,17 +37,17 @@
   margin: 0 auto;
 
   .footer-logo {
+    display: none;
     margin-bottom: 2em;
     text-align: center;
 
     img {
-      height: 5em;
+      @include filter(drop-shadow(1px 1px 0 #eee));
     }
   }
 
   .footer-links {
     @include clearfix;
-    margin-bottom: $base-spacing;
 
     @include media($medium-screen) {
       @include shift(3);
@@ -92,12 +88,6 @@
     margin-bottom: 0.4em;
   }
 
-  hr {
-    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
-    margin: 0 auto $base-spacing;
-    width: 12em;
-  }
-
   p {
     color: $footer-disclaimer-color;
     font-size: 0.9em;
@@ -107,4 +97,15 @@
     text-align: center;
   }
 
+  @include media($large-screen) {
+    @include background($footer-background);
+
+    .footer-logo {
+      display: block;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
 }

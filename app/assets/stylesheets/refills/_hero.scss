@@ -20,7 +20,7 @@
   }
 
   &.landing {
-    $landing-image: url(image-path('backgrounds/liag/title_screen.png'));
+    $landing-image: url(image-path('backgrounds/about.jpg'));
 
     @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 100% no-repeat);
 

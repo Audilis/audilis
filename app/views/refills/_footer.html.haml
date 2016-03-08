@@ -1,6 +1,5 @@
 %footer.footer{:role => "contentinfo"}
-  -#.footer-logo
-    = image_tag('logo_full.png', alt: 'Audilis')
+  %hr
   .footer-links
     %ul
       %li
@@ -13,6 +12,8 @@
         = link_to 'Features', features_liag_path
       %li
         = link_to 'FAQ', faq_liag_path
+      %li
+        = link_to 'Take the Quiz', new_quiz_path
     %ul
       %li
         %h3 Follow Us
@@ -53,6 +54,8 @@
         = link_to 'Terms and Conditions', terms_legal_path
       -#%li
         = link_to 'Privacy Policy', privacy_legal_path
+  .footer-logo
+    = image_tag('logos/full/audilis.png', alt: 'Audilis')
   %hr
   %p
     &copy;
