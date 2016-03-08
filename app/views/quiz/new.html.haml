@@ -11,7 +11,7 @@
 
 .centered.quiz
   - @quiz.each_pair do |id, question|
-    .question{ id: id, class: ('active' if id == 'A') }
+    .question{ id: id }
       %h1= question[:text]
       - question[:answers].each do |answer|
         = link_to answer[:text], "javascript:void(0);", data: { result: answer[:result] }
