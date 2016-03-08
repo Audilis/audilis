@@ -24,12 +24,6 @@
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-color: white;
-  background-position: center;
-  background-size: contain;
-
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
   min-height: 480px;
@@ -99,6 +93,12 @@
 
   @include media($large-screen) {
     @include background($footer-background);
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
 
     .footer-logo {
       display: block;
