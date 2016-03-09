@@ -1,6 +1,6 @@
 $large-screen: em(860) !default
 
-.centered
+div.centered
   @include span-columns(10)
   @include shift(1)
 
@@ -16,6 +16,10 @@ $large-screen: em(860) !default
   p
     text-align: left
     text-indent: 2em
+
+    &.centered
+      text-align: center
+      text-indent: 0
 
   a
     text-indent: 0

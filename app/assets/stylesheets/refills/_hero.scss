@@ -10,12 +10,28 @@
   @include texture(135deg, $dark-blue, $red, 86, 1);
 
   &.liag {
-    $liag-image: url(image-path('liag/backgrounds/photos.jpg'));
+    $liag-image: url(image-path('liag/backgrounds/lineup.jpg'));
 
-    @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 50% no-repeat);
+    background-image: $liag-image;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+
+    min-height: 400px;
+
+    .hero-inner {
+      padding: 0 2em;
+    }
+
+    .hero-logo img {
+      max-height: 200px;
+    }
 
     @include media($large-screen) {
-      @include background(linear-gradient(top, transparent 20%, rgba(darken($dark-blue, 40%), 0.95)), $liag-image 50% 50% no-repeat);
+      min-height: 900px;
+
+      .hero-logo img {
+        max-height: 400px;
+      }
     }
   }
 
@@ -31,7 +47,6 @@
 
   &.liag,
   &.landing {
-    background-attachment: scroll, fixed;
     background-size: cover;
   }
 
