@@ -2,7 +2,10 @@
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
-  $large-screen: em(860) !default;
+  $landing-image: url(image-path('backgrounds/about.jpg'));
+  $liag-large-image: url(image-path('liag/backgrounds/lineup-large.jpg'));
+  $liag-medium-image: url(image-path('liag/backgrounds/lineup-medium.jpg'));
+  $liag-small-image: url(image-path('liag/backgrounds/lineup-small.jpg'));
   //////////////////////////////////////////////////////////////////////////////////
 
   $hero-color: white;
@@ -10,9 +13,8 @@
   @include texture(135deg, $dark-blue, $red, 86, 1);
 
   &.liag {
-    $liag-image: url(image-path('liag/backgrounds/lineup.jpg'));
 
-    background-image: $liag-image;
+    background-image: $liag-small-image;
     background-position: 50% 100%;
     background-repeat: no-repeat;
 
@@ -26,7 +28,17 @@
       max-height: 200px;
     }
 
+    @include media($medium-screen) {
+      background-image: $liag-large-image;
+      min-height: 600px;
+
+      .hero-logo img {
+        max-height: 300px;
+      }
+    }
+
     @include media($large-screen) {
+      background-image: $liag-large-image;
       min-height: 900px;
 
       .hero-logo img {
@@ -36,7 +48,6 @@
   }
 
   &.landing {
-    $landing-image: url(image-path('backgrounds/about.jpg'));
 
     @include background(linear-gradient(top, rgba(darken($dark-blue, 40%), 0.25), rgba(darken($dark-blue, 40%), 0.95)), $landing-image 50% 100% no-repeat);
 
