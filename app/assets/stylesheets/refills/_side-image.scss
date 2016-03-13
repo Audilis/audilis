@@ -40,6 +40,10 @@
     width: 100%;
     max-width: 100%;
 
+    &.framed img {
+      border: 1em solid white;
+    }
+
     &.drop-shadow img {
       @include filter(drop-shadow(1em 1em 2em rgba(black, 0.2)));
     }
