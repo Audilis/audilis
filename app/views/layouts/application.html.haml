@@ -1,25 +1,36 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %meta{ charset: 'UTF-8'}
     %title= content_for?(:page_title) ? "Audilis - #{ content_for(:page_title) }" : "Audilis"
     %link{ rel: 'shortcut icon', href: '/public/favicon.ico', sizes: '16x16' }
     %meta{ name: "viewport", content: "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" }
+
     %meta{ name: "theme-color", content: "#D18687" }
     %meta{ property: "og:site_name", content: "Audilis"}
+
     - if ENV['FACEBOOK_APP_ID'].present?
       %meta{ property: 'fb:app_id', content: ENV['FACEBOOK_APP_ID'] }
+
     - if content_for?(:meta_keywords)
       %meta{ name: "keywords", content: content_for(:meta_keywords) }
+
+    - else
+      %meta{ name: "keywords", content: "otome, otoge, english, visual novel, dating, sim, simulation, game, mobile, indie, gaming, anime, manga, new, realistic, boys"}
+
     - if content_for?(:meta_title)
       %meta{ name: "title", content: content_for(:meta_title) }
       %meta{ property: "og:title", content: content_for(:meta_title) }
+
     - if content_for?(:meta_description)
       %meta{ name: "description", content: content_for(:meta_description) }
       %meta{ property: "og:description", content: content_for(:meta_description) }
+
     - if content_for?(:meta_image)
       %meta{ name: "thumbnail", content: content_for(:meta_image) }
       %meta{ property: "og:image", content: content_for(:meta_image) }
+
     - if content_for?(:meta_url)
       %meta{ name: "url", content: content_for(:meta_url) }
       %meta{ property: "og:url", content: content_for(:meta_url) }
