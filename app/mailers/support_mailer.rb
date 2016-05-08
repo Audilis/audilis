@@ -10,6 +10,6 @@ class SupportMailer < ApplicationMailer
     @sender = "#{message.name || 'Anonymous'} <#{message.email}>"
     @subject = message.topic || 'Message'
 
-    mail subject: @subject, from: @sender, to: 'support@audilis.com'
+    mail subject: @subject, reply_to: @sender, to: 'support@audilis.com'
   end
 end
