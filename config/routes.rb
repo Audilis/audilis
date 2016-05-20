@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     get :faq
   end
 
+  get 'acen' => 'liag#show'
+
   root 'home#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
