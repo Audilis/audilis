@@ -11,6 +11,8 @@
 
   @include texture(135deg, $dark-blue, $red, 86, 1);
 
+  position: relative;
+
   &.landing {
     background: #333;
 
@@ -41,6 +43,13 @@
 
       .hero-logo img {
         max-height: 300px;
+      }
+
+      .hero-copy {
+        @include position(absolute, auto 0px 0px 0px);
+
+        margin: auto;
+        max-width: 960px;
       }
     }
 

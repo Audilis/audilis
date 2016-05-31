@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resource :contact, only: [:new, :create], controller: :contact
   resources :games
   resources :identities
-  resources :subscriptions, only: [:create]
+  resources :subscriptions, only: [:new, :create]
   resources :quiz, only: [:new, :create, :show], controller: :quiz
 
   resource :liag, only: [:show], controller: :liag do

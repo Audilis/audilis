@@ -1,0 +1,6 @@
+.centered
+  %h1 Join our Newsletter
+  %hr
+  = form_for :subscription, url: subscriptions_path do |fields|
+    = fields.email_field :email, placeholder: 'Enter your email'
+    = fields.submit 'Subscribe', data: { disable_with: 'Subscribing...' }
