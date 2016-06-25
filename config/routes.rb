@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :terms
       get :privacy
+      get :eula
     end
   end
   resource :contact, only: [:new, :create], controller: :contact
