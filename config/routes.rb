@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get :faq
   end
 
+  resources :downloads, only: [:show, :index]
+
   get 'acen' => 'liag#show'
 
   root 'home#show'

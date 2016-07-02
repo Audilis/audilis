@@ -1,0 +1,17 @@
+- content_for :page_title, 'Download'
+- content_for :meta_title, 'Download'
+- content_for :meta_description, 'Download Love is a Game from the Google Play Store, Apple App Store, or Itch.io for Window, Linux, and Mac.'
+- content_for :meta_url, downloads_url
+
+.centered
+  %h1 Download
+  %hr
+
+  .pc
+    = render 'downloads/itch_store'
+
+  .mobile
+    = render 'downloads/play_store'
+    = render 'downloads/app_store'
+
+= render 'shared/newsletter'
