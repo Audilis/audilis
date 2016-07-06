@@ -44,4 +44,20 @@ module URLHelper
   def google_share_url(url)
     "https://plus.google.com/share?url=#{u(url)}"
   end
+
+  def itch_store_url
+    "https://audilis.itch.io/love-is-a-game"
+  end
+
+  def play_store_url
+    "http://play.google.com/store/apps/details?id=com.audilis.loveisagame"
+  end
+
+  def app_store_url
+    "#"
+  end
+
+  def greenlight_url
+    "http://steamcommunity.com/sharedfiles/filedetails/?id=713091278"
+  end
 end
