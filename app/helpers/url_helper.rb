@@ -62,6 +62,6 @@ module URLHelper
   end
 
   def kickstarter_url
-    "https://www.kickstarter.com/projects/audilis/1416961365?token=21287669"
+    "https://www.kickstarter.com/projects/audilis/1416961365"
   end
 end
