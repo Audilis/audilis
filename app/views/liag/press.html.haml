@@ -1,0 +1,26 @@
+- content_for :page_title, 'Love is a Game - Press Kit'
+- content_for :meta_title, 'Love is a Game - Press Kit'
+- content_for :meta_description, 'General information about Love is a Game for press release.'
+- content_for :meta_url, press_liag_url
+
+.press
+  %aside
+    = render 'liag/press/factsheet'
+
+  %article
+    %h1 Love is a Game Press Kit
+    = render 'liag/press/game'
+    = render 'liag/press/media'
+    = render 'liag/press/downloads'
+    = render 'liag/press/logos'
+    = render 'liag/press/company'
+    = render 'liag/press/team'
+
+    %h Contact Information
+    %hr
+
+    %h3 Email
+    press@audilis.com
+
+    %h3 Web
+    = render 'contact/form'

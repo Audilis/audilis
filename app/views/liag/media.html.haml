@@ -1,0 +1,18 @@
+- content_for :page_title, 'Love is a Game - Videos and Screenshots'
+- content_for :meta_title, 'Love is a Game - Videos and Screenshots'
+- content_for :meta_description, 'Love is a Game teaser video, gameplay video, and in-game screenshots.'
+- content_for :meta_url, media_liag_url
+
+.centered
+  %h1 Videos
+  %hr
+
+  = render 'liag/teaser_video'
+  = render 'liag/gameplay_video'
+
+  %h1 Screenshots
+
+  = image_tag 'liag/screenshots/1136x640-1.png'
+  = image_tag 'liag/screenshots/1136x640-2.png'
+  = image_tag 'liag/screenshots/1136x640-3.png'
+  = image_tag 'liag/screenshots/1136x640-4.png'

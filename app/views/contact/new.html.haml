@@ -8,14 +8,6 @@
   %h1 Contact Us
   %hr
 
-  = render 'shared/form_errors', resource: @message
-
-  = form_for @message, url: contact_path do |form|
-    = form.text_field :name, placeholder: 'Name'
-    = form.email_field :email, placeholder: 'Email', required: true, pattern: '([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})'
-    = form.text_field :topic, placeholder: 'Subject'
-    = form.text_area :message, placeholder: 'Message', required: true
-    = recaptcha_tags
-    = form.submit 'Send Message'
+  = render 'contact/form'
 
 = render 'shared/newsletter'

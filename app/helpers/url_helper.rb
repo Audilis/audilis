@@ -54,10 +54,14 @@ module URLHelper
   end
 
   def app_store_url
-    "#"
+    "https://itunes.apple.com/us/app/love-is-a-game-otome/id1120854013?ls=1&mt=8"
   end
 
   def greenlight_url
     "http://steamcommunity.com/sharedfiles/filedetails/?id=713091278"
+  end
+
+  def kickstarter_url
+    "https://www.kickstarter.com/projects/audilis/1416961365?token=21287669"
   end
 end
