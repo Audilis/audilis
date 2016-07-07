@@ -1,0 +1,66 @@
+.press
+  @include outer-container
+
+  padding-top: 2em
+
+  h2
+    margin: 32px auto 8px
+    text-align: center
+
+  h3
+    margin: 32px 0 8px
+
+  hr
+    margin: 8px auto
+
+  p
+    margin: 1em
+    text-align: left
+    text-indent: 3em
+
+  ul
+    list-style: disc
+    margin: 1em
+    text-align: left
+
+  dl
+    @include row
+
+    .member
+      @include span-columns(4)
+      @include omega(3n)
+
+      &:last-of-type
+        @include span-columns(12)
+        @include omega
+
+  .badges
+    @include row
+
+    margin: 32px auto
+
+    .badge
+      @include span-columns(3)
+      @include omega(4n)
+
+  .logos
+    @include row
+
+    background: #333
+    border-radius: 8px
+    margin: 1em
+
+    .logo
+      @include span-columns(6)
+      @include omega(2n)
+
+  article
+    @include span-columns(9)
+    @include omega
+
+    text-align: center
+
+  aside
+    @include span-columns(3)
+
+    text-align: left
