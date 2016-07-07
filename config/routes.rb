@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     get :press
   end
 
-  resources :downloads, only: [:show, :index]
+  resources :downloads, only: [:index]
 
   get 'acen' => 'liag#show'
 
