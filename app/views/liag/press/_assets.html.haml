@@ -1,20 +1,26 @@
 %h2 Promotional Assets
 %hr
 
-.logos
+%section.logos
   .logo= image_tag 'liag/chibis/full/alister.png'
   .logo= image_tag 'liag/chibis/full/jin.png'
   .logo= image_tag 'liag/chibis/full/dimitri.png'
   .logo= image_tag 'liag/chibis/full/faust.png'
   .logo= image_tag 'liag/chibis/full/milo.png'
   .logo= image_tag 'liag/chibis/full/enzo.png'
-  = link_to 'Download all: chibis.zip', image_path('liag/chibis.zip')
+  %footer
+    %div
+      All chibi artwork is &copy; 2016, Audilis. Redistribution is limited to press and promotional uses.
+    = link_to 'Download all: chibis.zip', image_path('liag/chibis.zip')
 
-.logos
+%section.logos
   .logo= image_tag 'liag/sprites/alister.png'
   .logo= image_tag 'liag/sprites/jin.png'
   .logo= image_tag 'liag/sprites/dimitri.png'
   .logo= image_tag 'liag/sprites/faust.png'
   .logo= image_tag 'liag/sprites/milo.png'
   .logo= image_tag 'liag/sprites/enzo.png'
-  = link_to 'Download all: sprites.zip', image_path('liag/sprites.zip')
+  %footer
+    %div
+      All sprite artwork is &copy; 2016, Audilis. Redistribution is limited to press and promotional uses.
+    = link_to 'Download all: sprites.zip', image_path('liag/sprites.zip')
