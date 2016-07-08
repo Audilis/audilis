@@ -45,10 +45,17 @@
     background: #333
     border-radius: 8px
     margin: 1em
+    overflow: hidden
 
     .logo
       @include span-columns(6)
       @include omega(2n)
+
+    a
+      background: #555
+      clear: both
+      display: block
+      padding: 1em
 
   article
     @include span-columns(9)
