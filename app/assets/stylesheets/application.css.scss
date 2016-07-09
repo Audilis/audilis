@@ -76,3 +76,18 @@ a {
   font-family: 'Audilis';
   font-size: 200%;
 }
+
+.ks-video {
+  width: 288px;
+  height: 162px;
+
+  @include media($medium-screen) {
+    width: 480px;
+    height: 270px;
+  }
+
+  @include media($large-screen) {
+    width: 800px;
+    height: 450px;
+  }
+}
