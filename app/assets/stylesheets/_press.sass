@@ -60,12 +60,24 @@
       padding: 1em
 
   article
-    @include span-columns(9)
-    @include omega
+    @include media($medium-screen)
+      @include span-columns(7)
+      @include omega
 
-    text-align: center
+    @include media($large-screen)
+      @include span-columns(9)
+      @include omega
+
+    padding: 8px
+    text-align: left
 
   aside
-    @include span-columns(3)
+    @include media($medium-screen)
+      @include span-columns(5)
 
+    @include media($large-screen)
+      @include span-columns(3)
+
+    display: none
+    padding: 8px
     text-align: left
