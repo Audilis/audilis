@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get :faq
     get :media
     get :press
+    get :late_pledge
+    get :thank_you
   end
 
   resources :downloads, only: [:index]

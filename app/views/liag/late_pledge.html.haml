@@ -1,0 +1,17 @@
+- content_for :page_title, 'Late Pledge'
+- content_for :meta_title, 'Late Pledge'
+- content_for :meta_description, 'For a limited time, pledge post-KickStarter for Love is a Game.'
+- content_for :meta_url, late_pledge_liag_url
+
+.centered
+  %h1 Late Pledge
+  %hr
+
+  - if flash[:alert]
+    %h3= flash[:alert]
+    %hr
+
+  %p
+    Missed the KickStarter? Payment didn't go through? Don't worry! We are offering late pledging for a limited time. For descriptions of each tier, please visit #{ link_to "the KickStarter rewards page", kickstarter_url + "/rewards", target: "_blank" }. If you have any questions, you can always #{ link_to "contact us", new_contact_path }.
+
+  = render 'liag/paypal'
